@@ -4,7 +4,7 @@ import { useState } from 'react';
 const tasks = [
   {
     id: 1,
-    title: 'Task 1: Styling Elements (20 min)-Due This Dunay',
+    title: 'Task 1: Styling Elements (20 min)-Due This Sunday',
     instructions: `
       - Center the title by selecting the h1 tag.
       - Select the image and make it smaller.
