@@ -1,11 +1,10 @@
-// app/page.tsx
 'use client'
 import { useState } from 'react';
 
 const tasks = [
   {
     id: 1,
-    title: 'Task 1: Styling Elements (20 min)',
+    title: 'Task 1: Styling Elements (20 min)-Due This Dunay',
     instructions: `
       - Center the title by selecting the h1 tag.
       - Select the image and make it smaller.
@@ -86,7 +85,7 @@ function Home() {
   return (
     <div className="min-h-screen bg-gray-100 p-4">
       <header className="bg-white shadow-md p-4 mb-4">
-        <h1 className="text-2xl font-bold text-center text-black">Jibran's CodeSpace</h1>
+        <h1 className="text-2xl font-bold text-center text-black">CodeSpace</h1>
         <p className="text-center mt-2 text-black">
           Website: <a href="https://replit.com/@Jibran2010/HTML-CSS-JS#style.css" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">Replit Project</a>
         </p>
