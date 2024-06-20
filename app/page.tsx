@@ -1,113 +1,127 @@
-import Image from "next/image";
+// app/page.tsx
+'use client'
+import { useState } from 'react';
 
-export default function Home() {
+const tasks = [
+  {
+    id: 1,
+    title: 'Task 1: Styling Elements (20 min)',
+    instructions: `
+      - Center the title by selecting the h1 tag.
+      - Select the image and make it smaller.
+      - Turn all the paragraphs orange by selecting the p tag.
+      - Add margin to the webpage in the body tag.
+      - Add padding to the sections by selecting the section tag.
+      
+      Link to Replit Project (also found on the top of this codespace): https://replit.com/@Jibran2010/HTML-CSS-JS#style.css
+    `,
+    image: '/css.png'
+  },
+  {
+    id: 2,
+    title: 'Task 2: Using IDs (15 min)',
+    instructions: `
+      - Give an id to the title (h1 tag). <h1 id="main-title">Basketball</h1>
+      - Select the h1 using the id in CSS. the # selects an html element by the id
+      #main-title {
+        text-align: center;
+      }
+      - Give an id to one of the section headers, e.g., "How to play basketball."
+      - Select that header using the id and turn it blue.
+
+
+      Link to Replit Project: https://replit.com/@Jibran2010/HTML-CSS-JS#style.css
+    `,
+    image: '/ids.png'
+  },
+  {
+    id: 3,
+    title: 'Task 3: Creating Labels (10 min)',
+    instructions: `
+      - Make labels for each of the inputs instead of using h3 tags.
+
+      Link to Replit Project: https://replit.com/@Jibran2010/HTML-CSS-JS#style.css
+    `,
+    image: 'codesnippet3.png'
+  },
+  {
+    id: 4,
+    title: 'Task 4: Creating a Button (10 min)',
+    instructions: `
+      - Create a button at the bottom of the website that says "Submit."
+      - Add an onclick attribute that calls a JavaScript function named userSubmit().
+
+      Link to Replit Project: https://replit.com/@Jibran2010/HTML-CSS-JS#style.css
+    `,
+    image: 'codesnippet4.png'
+  },
+  {
+    id: 5,
+    title: 'Task 5: JavaScript Function (5 min)',
+    instructions: `
+      - Go to script.js and create a function called userSubmit().
+      - Inside the function, alert the user that they submitted.
+
+      Link to Replit Project: https://replit.com/@Jibran2010/HTML-CSS-JS#script.js
+    `,
+    image: 'codesnippet5.png'
+  },
+  {
+    id: 6,
+    title: 'Task 6: Using IDs for Inputs (5 min)',
+    instructions: `
+      - Give an id to the first input with the label that asks what you want the title of the website to be.
+
+      Link to Replit Project: https://replit.com/@Jibran2010/HTML-CSS-JS#style.css
+    `,
+    image: 'codesnippet6.png'
+  },
+];
+
+function Home() {
+  const [selectedTask, setSelectedTask] = useState<number | null>(null);
+
+  const selectedTaskDetails = tasks.find((task) => task.id === selectedTask);
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
+    <div className="min-h-screen bg-gray-100 p-4">
+      <header className="bg-white shadow-md p-4 mb-4">
+        <h1 className="text-2xl font-bold text-center text-black">Jibran's CodeSpace</h1>
+        <p className="text-center mt-2 text-black">
+          Website: <a href="https://replit.com/@Jibran2010/HTML-CSS-JS#style.css" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">Replit Project</a>
         </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+      </header>
+      <section className="bg-white shadow-md p-4 rounded-md">
+        <h2 className="text-xl font-semibold mb-4">Tasks</h2>
+        <ul className="space-y-2">
+          {tasks.map((task) => (
+            <li
+              key={task.id}
+              onClick={() => setSelectedTask(task.id)}
+              className="p-2 bg-gray-200 rounded-md cursor-pointer hover:bg-gray-300 transition text-black"
+            >
+              {task.title}
+            </li>
+          ))}
+        </ul>
+        {selectedTaskDetails && (
+          <div className="mt-4 p-4 bg-gray-100 rounded-md text-black">
+            <h3 className="text-lg font-semibold">
+              Instructions for {selectedTaskDetails.title}
+            </h3>
+            <ul className="mt-2 space-y-2">
+              {selectedTaskDetails.instructions.split('\n').map((instruction, index) => (
+                <li key={index} className="flex items-center space-x-2">
+                  <span>{instruction}</span>
+                </li>
+              ))}
+            </ul>
+            <img src={selectedTaskDetails.image} alt="Code Snippet" className="mt-4 w-full max-w-sm mx-auto" />
+          </div>
+        )}
+      </section>
+    </div>
   );
 }
+
+export default Home;
