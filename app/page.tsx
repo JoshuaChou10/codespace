@@ -26,7 +26,8 @@ const tasks = [
         text-align: center;
       }
       - Give an id to one of the section headers, e.g., "How to play basketball."
-      - Select that header using the id and turn it blue.
+      - Select that header using the id and turn the background-color any color you want using RGB
+      -Repeat with the other headers
 
 
       Link to Replit Project: https://replit.com/@Jibran2010/HTML-CSS-JS#style.css
@@ -38,10 +39,13 @@ const tasks = [
     title: 'Task 3: Creating Labels (10 min)',
     instructions: `
       - Make labels for each of the inputs instead of using h3 tags.
-
+      - give the input an id
+      - use the for attribute in the label and set it to the input id, to connect them
+      - now when you click on the label, the input also registers
+      -feel free to add extra styling
       Link to Replit Project: https://replit.com/@Jibran2010/HTML-CSS-JS#style.css
     `,
-    image: 'codesnippet3.png'
+    image: 'labels.png'
   },
   {
     id: 4,
