@@ -30,6 +30,7 @@ const tasks = [
       border-style:solid
       border-color:red
       -Repeat with the other headers
+      -Give inline style to any of the elements. so inside the html tag put style="ADD-CSS-HERE"
 
 
       Link to Replit Project: https://replit.com/@Jibran2010/HTML-CSS-JS#style.css
@@ -50,20 +51,21 @@ const tasks = [
     image: 'labels.png'
   },
   {
-    id: 3,
+    id: 4,
     title: 'Using Classes',
     instructions: `
       - Classes are like id's but they group elements together, so less spcefic
       - Give the 2 inputs at the bottom each a class called "color-input"
-      - use the for attribute in the label and set it to the input id, to connect them
-      - now when you click on the label, the input also registers
-      -feel free to add extra styling
+      -Classes you can have the same name for multiple elements, but id is unique to that one element
+      - select the .color-input classes using the . to mean class. 
+      - So .color-input selects the input by their classes
+      -give each a background color of blue or any RGB
       Link to Replit Project: https://replit.com/@Jibran2010/HTML-CSS-JS#style.css
     `,
-    image: 'labels.png'
+    image: 'class.png'
   },
   {
-    id: 4,
+    id: 5,
     title: 'Creating a Button (10 min)',
     instructions: `
       - Create a button at the bottom of the website that says "Submit."
@@ -74,7 +76,7 @@ const tasks = [
     image: 'codesnippet4.png'
   },
   {
-    id: 5,
+    id: 6,
     title: 'JavaScript Function (5 min)',
     instructions: `
       - Go to script.js and create a function called userSubmit().
@@ -85,7 +87,7 @@ const tasks = [
     image: 'codesnippet5.png'
   },
   {
-    id: 6,
+    id: 7,
     title: 'Using IDs for Inputs (5 min)',
     instructions: `
       - Give an id to the first input with the label that asks what you want the title of the website to be.
