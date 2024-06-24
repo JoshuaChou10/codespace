@@ -73,7 +73,7 @@ const tasks = [
 
       Link to Replit Project: https://replit.com/@Jibran2010/HTML-CSS-JS#style.css
     `,
-    image: 'codesnippet4.png'
+    image: 'button.png'
   },
   {
     id: 6,
@@ -84,7 +84,7 @@ const tasks = [
 
       Link to Replit Project: https://replit.com/@Jibran2010/HTML-CSS-JS#script.js
     `,
-    image: 'codesnippet5.png'
+    image: 'function.png'
   },
   {
     id: 7,
@@ -114,13 +114,13 @@ function Home() {
       <section className="bg-white shadow-md p-4 rounded-md">
         <h2 className="text-xl font-semibold mb-4">Tasks</h2>
         <ul className="space-y-2">
-          {tasks.map((task) => (
+          {tasks.map((task,index) => (
             <li
               key={task.id}
               onClick={() => setSelectedTask(task.id)}
               className="p-2 bg-gray-200 rounded-md cursor-pointer hover:bg-gray-300 transition text-black"
             >
-              Task {task.id}: {task.title}
+              Task {index+1}: {task.title}
             </li>
           ))}
         </ul>
