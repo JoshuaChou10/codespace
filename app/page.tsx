@@ -4,7 +4,7 @@ import { useState } from 'react';
 const tasks = [
   {
     id: 1,
-    title: 'Task 1: Styling Elements (20 min)-Due This Sunday',
+    title: 'Styling Elements (20 min)-Finished',
     instructions: `
       - Center the title by selecting the h1 tag.
       - Select the image and make it smaller.
@@ -18,7 +18,7 @@ const tasks = [
   },
   {
     id: 2,
-    title: 'Task 2: Using IDs (15 min)',
+    title: 'Using IDs (15 min)-Due this Wednesday',
     instructions: `
       - Give an id to the title (h1 tag). <h1 id="main-title">Basketball</h1>
       - Select the h1 using the id in CSS. the # selects an html element by the id
@@ -26,7 +26,9 @@ const tasks = [
         text-align: center;
       }
       - Give an id to one of the section headers, e.g., "How to play basketball."
-      - Select that header using the id and turn the background-color any color you want using RGB
+      - Select that header using the id and add a border. To add a border do
+      border-style:solid
+      border-color:red
       -Repeat with the other headers
 
 
@@ -36,7 +38,7 @@ const tasks = [
   },
   {
     id: 3,
-    title: 'Task 3: Creating Labels (10 min)',
+    title: 'Creating Labels (10 min)',
     instructions: `
       - Make labels for each of the inputs instead of using h3 tags.
       - give the input an id
@@ -48,8 +50,21 @@ const tasks = [
     image: 'labels.png'
   },
   {
+    id: 3,
+    title: 'Using Classes',
+    instructions: `
+      - Classes are like id's but they group elements together, so less spcefic
+      - Give the 2 inputs at the bottom each a class called "color-input"
+      - use the for attribute in the label and set it to the input id, to connect them
+      - now when you click on the label, the input also registers
+      -feel free to add extra styling
+      Link to Replit Project: https://replit.com/@Jibran2010/HTML-CSS-JS#style.css
+    `,
+    image: 'labels.png'
+  },
+  {
     id: 4,
-    title: 'Task 4: Creating a Button (10 min)',
+    title: 'Creating a Button (10 min)',
     instructions: `
       - Create a button at the bottom of the website that says "Submit."
       - Add an onclick attribute that calls a JavaScript function named userSubmit().
@@ -60,7 +75,7 @@ const tasks = [
   },
   {
     id: 5,
-    title: 'Task 5: JavaScript Function (5 min)',
+    title: 'JavaScript Function (5 min)',
     instructions: `
       - Go to script.js and create a function called userSubmit().
       - Inside the function, alert the user that they submitted.
@@ -71,7 +86,7 @@ const tasks = [
   },
   {
     id: 6,
-    title: 'Task 6: Using IDs for Inputs (5 min)',
+    title: 'Using IDs for Inputs (5 min)',
     instructions: `
       - Give an id to the first input with the label that asks what you want the title of the website to be.
 
@@ -103,7 +118,7 @@ function Home() {
               onClick={() => setSelectedTask(task.id)}
               className="p-2 bg-gray-200 rounded-md cursor-pointer hover:bg-gray-300 transition text-black"
             >
-              {task.title}
+              Task {task.id}: {task.title}
             </li>
           ))}
         </ul>
