@@ -54,11 +54,11 @@ const tasks = [
     id: 4,
     title: 'Using Classes',
     instructions: `
-      - Classes are like id's but they group elements together, so less spcefic
-      - Give the 2 inputs at the bottom each a class called "color-input"
-      -Classes you can have the same name for multiple elements, but id is unique to that one element
-      - select the .color-input classes using the . to mean class. 
-      - So .color-input selects the input by their classes
+      - Classes are like id's but they group elements together, so less specific
+      - In HTML: Give the 2 inputs at the bottom each a class called "color-input"
+      - Note: For classes you can have the same name for multiple elements, but id is unique to that one element
+      - In CSS: select the .color-input classes using the . to mean class. 
+      - Note: So .color-input selects the input by their classes
       -give each a background color of blue or any RGB
       Link to Replit Project: https://replit.com/@Jibran2010/HTML-CSS-JS#style.css
     `,
@@ -66,15 +66,16 @@ const tasks = [
   },
   {
     id: 5,
-    title: 'Creating a Button (10 min)',
+    title: 'Creating a Button (5 min)',
     instructions: `
-      - Create a button at the bottom of the website that says "Submit."
+      -In HTML: Create a button at the bottom of the website that says "Submit."
       - Add an onclick attribute that calls a JavaScript function named userSubmit().
 
       Link to Replit Project: https://replit.com/@Jibran2010/HTML-CSS-JS#style.css
     `,
     image: 'button.png'
   },
+  
   {
     id: 6,
     title: 'JavaScript Function (5 min)',
@@ -88,13 +89,20 @@ const tasks = [
   },
   {
     id: 7,
-    title: 'Using IDs for Inputs (5 min)',
+    title: 'Final Project',
     instructions: `
-      - Give an id to the first input with the label that asks what you want the title of the website to be.
+      Over here you are going to create a website on any topic you want
+      Here are the criteria
+      - Have a title that is centered
+      -Have website sections
+      -Use at least 3 id's and select them in CSS and make each styling for each id unique
+      -Use at least 1 class, and multiple elements must have this same class. Select in CSS and give each element in the class styling (you only need 1 selector in CSS)
+      -Make a Javscript quiz, so you need HTML inputs and the document.getElementById() function. 
+      -Alternatively you could use javascript to make the website for interactive, so allow the user to change the color of the website, or the text etc...
+      -Below I have attatched an example website you could make
 
-      Link to Replit Project: https://replit.com/@Jibran2010/HTML-CSS-JS#style.css
     `,
-    image: 'codesnippet6.png'
+    image: 'final.png'
   },
 ];
 
