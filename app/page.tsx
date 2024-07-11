@@ -2,95 +2,140 @@
 import { useState } from 'react';
 
 const tasks = [
+ 
   {
-    id: 1,
-    title: 'Styling Elements (20 min)-Finished',
-    instructions: `
-      - Center the title by selecting the h1 tag.
-      - Select the image and make it smaller.
-      - Turn all the paragraphs orange by selecting the p tag.
-      - Add margin to the webpage in the body tag.
-      - Add padding to the sections by selecting the section tag.
+    "id": 1,
+    "title": "Basic HTML Tags (20 min)",
+    "instructions": `
+      - Add a paragraph below the title:
+        <p>This is a paragraph.</p>
+      - Add an unordered list with three items:
+        <ul>
+          <li>First item</li>
+          <li>Second item</li>
+          <li>Third item</li>
+        </ul>
+      - Add a link to an external website:
+        <a href="https://www.example.com">Visit Example</a>
+      - Add an image (use a placeholder image link if you don't have one):
+        <img src="https://via.placeholder.com/150" alt="Placeholder Image">
       
-      Link to Replit Project (also found on the top of this codespace): https://replit.com/@Jibran2010/HTML-CSS-JS#style.css
+      Link to Replit Project: https://replit.com/@Jibran2010/HTML-CSS-JS#index.html
     `,
-    image: '/css.png'
+    "image": "/tags.png"
   },
   {
-    id: 2,
-    title: 'Using IDs (15 min)-Due this Wednesday',
-    instructions: `
-      - Give an id to the title (h1 tag). <h1 id="main-title">Basketball</h1>
-      - Select the h1 using the id in CSS. the # selects an html element by the id
-      #main-title {
-        text-align: center;
-      }
-      - Give an id to one of the section headers, e.g., "How to play basketball."
-      - Select that header using the id and add a border. To add a border do
-      border-style:solid
-      border-color:red
-      -Repeat with the other headers
-      -Give inline style to any of the elements. so inside the html tag put style="ADD-CSS-HERE"
-
-
+    "id": 2,
+    "title": "Styling Elements (20 min)",
+    "instructions": `
+      - Center the title (h1).
+      - Resize the image.
+      - Make all paragraphs (p) orange.
+      - Add margin to the body.
+      - Add padding to sections (section).
+      
       Link to Replit Project: https://replit.com/@Jibran2010/HTML-CSS-JS#style.css
     `,
-    image: '/ids.png'
+    "image": "/css.png"
   },
   {
-    id: 3,
-    title: 'Creating Labels (10 min)',
-    instructions: `
-      - Make labels for each of the inputs instead of using h3 tags.
-      - give the input an id
-      - use the for attribute in the label and set it to the input id, to connect them
-      - now when you click on the label, the input also registers
-      -feel free to add extra styling
-      Link to Replit Project: https://replit.com/@Jibran2010/HTML-CSS-JS#style.css
-    `,
-    image: 'labels.png'
-  },
-  {
-    id: 4,
-    title: 'Using Classes',
-    instructions: `
-      - Classes are like id's but they group elements together, so less specific
-      - In HTML: Give the 2 inputs at the bottom each a class called "color-input"
-      - Note: For classes you can have the same name for multiple elements, but id is unique to that one element
-      - In CSS: select the .color-input classes using the . to mean class. 
-      - Note: So .color-input selects the input by their classes
-      -give each a background color of blue or any RGB
-      Link to Replit Project: https://replit.com/@Jibran2010/HTML-CSS-JS#style.css
-    `,
-    image: 'class.png'
-  },
-  {
-    id: 5,
-    title: 'Creating a Button (5 min)',
-    instructions: `
-      -In HTML: Create a button at the bottom of the website that says "Submit."
-      - Add an onclick attribute that calls a JavaScript function named userSubmit().
-
-      Link to Replit Project: https://replit.com/@Jibran2010/HTML-CSS-JS#style.css
-    `,
-    image: 'button.png'
-  },
+    "id": 3,
+    "title": "Using IDs (15 min)",
+    "instructions": `
+      - Give an id to the title (h1). Example: <h1 id="main-title">Basketball</h1>
+      - Select the h1 using the id in CSS. Example:
+        #main-title {
+          text-align: center;
+        }
+      - Give an id to section headers.
+      - Select each header using its id and add a border. Example:
+        #section-id {
+          border: 1px solid red;
+        }
+      - Add inline styles to any element. Example: <h1 style="color: blue;">Title</h1>
   
+      Link to Replit Project: https://replit.com/@Jibran2010/HTML-CSS-JS#style.css
+    `,
+    "image": "/ids.png"
+  },
   {
-    id: 6,
-    title: 'JavaScript Function (5 min)',
-    instructions: `
-      - Go to script.js and create a function called userSubmit().
-      - Inside the function, alert the user that they submitted.
-
+    "id": 4,
+    "title": "Creating Labels (10 min)",
+    "instructions": `
+      - Replace h3 tags with labels for each input.
+      - Give each input an id.
+      - Use the for attribute in labels to link them to inputs. Example:
+        <label for="input-id">Label</label>
+        <input id="input-id" type="text">
+      - Add extra styling if desired.
+  
+      Link to Replit Project: https://replit.com/@Jibran2010/HTML-CSS-JS#style.css
+    `,
+    "image": "labels.png"
+  },
+  {
+    "id": 5,
+    "title": "Using Classes",
+    "instructions": `
+      - Classes group elements together.
+      - Give the 2 bottom inputs the class "color-input".
+      - Note: Multiple elements can share the same class, but ids are unique.
+      - Select the classes in CSS using .color-input.
+      - Set a background color for each input. Example:
+        .color-input {
+          background-color: blue;
+        }
+  
+      Link to Replit Project: https://replit.com/@Jibran2010/HTML-CSS-JS#style.css
+    `,
+    "image": "class.png"
+  },
+  {
+    "id": 6,
+    "title": "Creating a Navbar",
+    "instructions": `
+      - Navbars help users navigate your website.
+      - Define a navbar with <nav></nav>.
+      - Inside, create an unordered list <ul></ul>.
+      - Add list items <li></li> for each section. Example: <li>Home</li>
+      - Use anchor tags to link sections. Example:
+        <a href="#home">Home</a>
+  
+      Link to Replit Project: https://replit.com/@Jibran2010/HTML-CSS-JS#style.css
+    `,
+    "image": "class.png"
+  },
+  {
+    "id": 7,
+    "title": "Creating a Button (5 min)",
+    "instructions": `
+      - Create a "Submit" button in HTML.
+      - Add an onclick attribute to call a JavaScript function named userSubmit(). Example:
+        <button onclick="userSubmit()">Submit</button>
+  
+      Link to Replit Project: https://replit.com/@Jibran2010/HTML-CSS-JS#style.css
+    `,
+    "image": "button.png"
+  },
+  {
+    "id": 8,
+    "title": "JavaScript Function (5 min)",
+    "instructions": `
+      - In script.js, create a function named userSubmit().
+      - Inside the function, add an alert to notify the user of their submission. Example:
+        function userSubmit() {
+          alert('You submitted!');
+        }
+  
       Link to Replit Project: https://replit.com/@Jibran2010/HTML-CSS-JS#script.js
     `,
-    image: 'function.png'
-  },
+    "image": "function.png"
+  }
+  ,
   {
-    id: 7,
-    title: 'Final Project',
-    instructions: `
+    "id": 9,
+    "title": 'Final Project',
+    "instructions": `
       Over here you are going to create a website on any topic you want
       Here are the criteria
       - Have a title that is centered
