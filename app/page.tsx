@@ -107,6 +107,21 @@ const tasks = [
   },
   {
     "id": 7,
+    "title": "Using flexbox",
+    "instructions": `
+      - Flex box allows us to change the orientation of things
+      - Right now the navbar is vertical, with flexbox we can make it horizontal
+      - First we put display: flex to put it into flexbox mode
+      - Then add justify-content:center
+      - Then add margin in between the list elements
+        
+  
+      Link to Replit Project: https://replit.com/@Jibran2010/HTML-CSS-JS#style.css
+    `,
+    "image": "nav.png"
+  },
+  {
+    "id": 8,
     "title": "Creating a Button (5 min)",
     "instructions": `
       - Create a "Submit" button in HTML.
@@ -117,8 +132,9 @@ const tasks = [
     `,
     "image": "button.png"
   },
+ 
   {
-    "id": 8,
+    "id": 9,
     "title": "JavaScript Function (5 min)",
     "instructions": `
       - In script.js, create a function named userSubmit().
@@ -133,7 +149,7 @@ const tasks = [
   }
   ,
   {
-    "id": 9,
+    "id": 10,
     "title": 'Final Project',
     "instructions": `
       Over here you are going to create a website on any topic you want
@@ -147,7 +163,7 @@ const tasks = [
       -Below I have attatched an example website you could make
 
     `,
-    image: 'final.png'
+    "image": 'final.png'
   },
 ];
 
