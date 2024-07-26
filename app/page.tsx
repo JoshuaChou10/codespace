@@ -176,8 +176,13 @@ function Home() {
     <div className="min-h-screen bg-gray-100 p-4">
       <header className="bg-white shadow-md p-4 mb-4">
         <h1 className="text-2xl font-bold text-center text-black">CodeSpace</h1>
+        <h2>Quiz:<a href="https://2f2e5dcb-a081-4f0e-a94a-80eb0631a516-00-31ufw8lkfpk4k.riker.replit.dev/" target="_blank" rel="noopener noreferrer" className="text-blue-500 text-3xl underline">Quiz</a></h2>
         <p className="text-center mt-2 text-black">
-          Website: <a href="https://replit.com/@Jibran2010/HTML-CSS-JS#style.css" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">Replit Project</a>
+          Basketball Website: <a href="https://replit.com/@Jibran2010/HTML-CSS-JS#style.css" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">Replit Project</a>
+          <br></br>
+          Javascript Practice: <a href="https://replit.com/@Jibran2010/java-script-practice#script.js" target="_blank" rel="noopener noreferrer"className="text-blue-500 underline">Replit Project</a>
+          <br></br>
+          HTML CSS JS Practice: <a href="https://replit.com/join/twcaljbhdz-joshuac16" target="_blank" rel="noopener noreferrer"className="text-blue-500 underline">Replit Project</a>
         </p>
       </header>
       <section className="bg-white shadow-md p-4 rounded-md">
